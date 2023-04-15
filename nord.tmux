@@ -9,7 +9,7 @@
 #   https://tmux.github.io
 
 NORD_TMUX_COLOR_THEME_FILE=src/nord.conf
-NORD_TMUX_VERSION=0.3.0
+NORD_TMUX_VERSION=custom
 NORD_TMUX_STATUS_CONTENT_FILE="src/nord-status-content.conf"
 NORD_TMUX_STATUS_CONTENT_NO_PATCHED_FONT_FILE="src/nord-status-content-no-patched-font.conf"
 NORD_TMUX_STATUS_CONTENT_OPTION="@nord_tmux_show_status_content"
@@ -22,7 +22,7 @@ __cleanup() {
   unset -v NORD_TMUX_STATUS_CONTENT_FILE NORD_TMUX_STATUS_CONTENT_NO_PATCHED_FONT_FILE
   unset -v NORD_TMUX_STATUS_CONTENT_OPTION NORD_TMUX_NO_PATCHED_FONT_OPTION
   unset -v NORD_TMUX_STATUS_CONTENT_DATE_FORMAT
-  unset -v _current_dir
+  #unset -v _current_dir
   unset -f __load __cleanup
   tmux set-environment -gu NORD_TMUX_STATUS_TIME_FORMAT
   tmux set-environment -gu NORD_TMUX_STATUS_DATE_FORMAT
